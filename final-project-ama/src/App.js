@@ -1,4 +1,5 @@
 import './App.css';
+import calendar from './components/calendar';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <h1>
          Programare Specialisti     
       </h1>
+
 
       <div class='group-1'> 
 
@@ -65,25 +67,13 @@ function App() {
         <option value='37'>Ungheni</option>
         <option value='38'>Vulcanesti</option>
 
-
-
       </select>
-
-      <select id='Day'>
-        <option value='1'>Luni</option>
-        <option value='2'>Marti</option>
-        <option value='3'>Miercuri</option>
-        <option value='4'>Joi</option>
-        <option value='5'>Vineri</option>
-        <option value='6'>Sambata</option>
-        <option value='7'>Duminica</option>
-      </select>
-
 
       <button class='search_button' onlick='searchButton()'> CAUTA</button>
             </div>
-
     </div>
+
+
   );
 }
 
