@@ -7,10 +7,10 @@ interface Specialist {
   prenume: String;
   oras: String;
   telefon: String;
-  profesie: string
+  profesie: String
 }
 
-// getting all users
+// getting all specialisti
 const getSpecialisti = async (req: Request, res: Response, next: NextFunction) => {
   await connection.query(`select * from amaProject.specialisti`, (err: any, result: Specialist, fields: any) =>{
     if(result){
