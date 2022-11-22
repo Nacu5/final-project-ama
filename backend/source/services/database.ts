@@ -1,10 +1,12 @@
+import environment from '../environment';
+
 let mysql = require('mysql');
 
 let connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'admin',
-  password: '@sud0xx',
-  database: 'specialisti'
+  host: environment.dbHost,
+  user: environment.dbUser,
+  password: environment.dbPassword,
+  database: environment.dbName
 });
 
 connection.connect(function(err: any) {

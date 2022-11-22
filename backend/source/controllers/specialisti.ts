@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import connection from '../services/database';
 
-interface User {
+interface Specialist {
   id: Number;
   nume: String;
   prenume: String;
@@ -11,8 +11,8 @@ interface User {
 }
 
 // getting all users
-const getUsers = async (req: Request, res: Response, next: NextFunction) => {
-  await connection.query(`select * from amaProject.specialisti`, (err: any, result: User, fields: any) =>{
+const getSpecialisti = async (req: Request, res: Response, next: NextFunction) => {
+  await connection.query(`select * from amaProject.specialisti`, (err: any, result: Specialist, fields: any) =>{
     if(result){
       return res.status(200).json({
         data: result
@@ -21,4 +21,4 @@ const getUsers = async (req: Request, res: Response, next: NextFunction) => {
   })
 };
 
-export default { getUsers };
+export default { getSpecialisti };
