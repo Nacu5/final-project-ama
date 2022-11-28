@@ -1,8 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import './OptionList.css';
 
 function OptionList() {
+const [locatie, setlocatie] = useState (null)
+const [specialist, setspecialist] = useState (null)
+console.log(locatie)
+console.log(specialist)
+
+function changespecialist(event) {
+  setspecialist(event.target.value)
+}
+  function changelocatie(event) {
+    setlocatie(event.target.value)
+  }
+
+  function cauta (){
+    console.log(specialist)
+    if ( specialist=='notar'){
+      fetchnotari ()
+    }
+    if ( specialist=='executor'){
+      fetchexecutor ()
+    }
+  }
+
+  function fetchnotari (){
+    const url =`http://localhost:6060/specialisti?locatia=${locatie}`; 
+    fetch(url)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        console.log(result)
+      },
+      // Note: it's important to handle errors here
+      // instead of a catch() block so that we don't swallow
+      // exceptions from actual bugs in components.
+      (error) => {
+      }
+    )
+  }
+
+  function fetchexecutor (){
+    const url =`http://localhost:6060/executori?locatia=${locatie}`; 
+    fetch(url)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        console.log(result)
+      },
+      // Note: it's important to handle errors here
+      // instead of a catch() block so that we don't swallow
+      // exceptions from actual bugs in components.
+      (error) => {
+      }
+    )
+  }
   return (
     <div className="OptionList">
 
@@ -13,23 +66,24 @@ function OptionList() {
 
       <div class='group-1'> 
 
-        <select id="Type" onchange='selectSearchType()'>
+
+        <select id="Type" onChange={changespecialist}>
           <option value='notar' class='Level'>Notar</option>
           <option value='executor' class='Level'>Executor</option>
          </select>
 
     
 
-        <select id='Location'>
+        <select id='Location' onChange={changelocatie}>
           <option value="0">-Selectati orasul--</option>
           <option value='1'>Anenii Noi</option>
           <option value='2'>Balti</option>
           <option value='3'>Basarabeasca</option>
           <option value='4'>Briceni</option>
           <option value='5'>Calarasi</option>
-          <option value='6'>Causeni</option>
-          <option value='7'>Cahul</option>
-          <option value='8'>Cantemir</option>
+          <option value='Causeni'>Causeni</option>
+          <option value='Cahul'>Cahul</option>
+          <option value='Cantemir'>Cantemir</option>
           <option value='9'>Ceadar-Lunga</option>
           <option value='10'>Chisinau</option>
           <option value='11'>Cimislia</option>
@@ -63,7 +117,7 @@ function OptionList() {
 
         </select>
 
-        <Button label={'cauta'}/>
+        <Button handleClick={cauta} label={'cauta'}/>
       </div>
     </div>
 )}

@@ -11,5 +11,6 @@ router.delete('/posts/:id', postsController.deletePost);
 router.post('/posts', postsController.addPost);
 
 router.get('/specialisti', usersController.getSpecialisti);
+router.get('/executori', usersController.getExecutori);
 
 export default router;
