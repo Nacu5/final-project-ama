@@ -76,48 +76,48 @@ function changespecialist(event) {
 
         <select id='Location' onChange={changelocatie}>
           <option value="0">-Selectati orasul--</option>
-          <option value='1'>Anenii Noi</option>
-          <option value='2'>Balti</option>
-          <option value='3'>Basarabeasca</option>
-          <option value='4'>Briceni</option>
-          <option value='5'>Calarasi</option>
+          <option value='Anenii Noi'>Anenii Noi</option>
+          <option value='Balti'>Balti</option>
+          <option value='Basarabeasca'>Basarabeasca</option>
+          <option value='Briceni'>Briceni</option>
+          <option value='Calarasi'>Calarasi</option>
           <option value='Causeni'>Causeni</option>
           <option value='Cahul'>Cahul</option>
           <option value='Cantemir'>Cantemir</option>
-          <option value='9'>Ceadar-Lunga</option>
-          <option value='10'>Chisinau</option>
-          <option value='11'>Cimislia</option>
-          <option value='12'>Comrat</option>
-          <option value='13'>Criuleni</option>
-          <option value='14'>Donduseni</option>
-          <option value='15'>Drochia</option>
-          <option value='16'>Dubasari</option>
-          <option value='17'>Edinet</option>
-          <option value='18'>Floresti</option>
-          <option value='19'>Glodeni</option>
-          <option value='20'>Hancesti</option>
-          <option value='21'>Ialoveni</option>
-          <option value='22'>Leova</option>
-          <option value='23'>Lipcani</option>
-          <option value='24'>Nisporeni</option>
-          <option value='25'>Ocnita</option>
-          <option value='26'>Orhei</option>
-          <option value='27'>Otaci</option>
-          <option value='28'>Rascani</option>
-          <option value='29'>Rezina</option>
-          <option value='30'>Sangerei</option>
-          <option value='31'>Soroca</option>
-          <option value='32'>Soldanesti</option>
-          <option value='33'>Stefan Voda</option>
-          <option value='34'>Straseni</option>
-          <option value='35'>Taraclia</option>
-          <option value='36'>Telenesti</option>
-          <option value='37'>Ungheni</option>
-          <option value='38'>Vulcanesti</option>
+          <option value='Ceadar-Lunga'>Ceadar-Lunga</option>
+          <option value='Chisinau'>Chisinau</option>
+          <option value='Cimislia'>Cimislia</option>
+          <option value='Comrat'>Comrat</option>
+          <option value='Criuleni'>Criuleni</option>
+          <option value='Donduseni'>Donduseni</option>
+          <option value='Drochia'>Drochia</option>
+          <option value='Dubasari'>Dubasari</option>
+          <option value='Edinet'>Edinet</option>
+          <option value='Floresti'>Floresti</option>
+          <option value='Glodeni'>Glodeni</option>
+          <option value='Hancesti'>Hancesti</option>
+          <option value='Ialoveni'>Ialoveni</option>
+          <option value='Leova'>Leova</option>
+          <option value='Lipcani'>Lipcani</option>
+          <option value='Nisporeni'>Nisporeni</option>
+          <option value='Ocnita'>Ocnita</option>
+          <option value='Orhei'>Orhei</option>
+          <option value='Otaci'>Otaci</option>
+          <option value='Rascani'>Rascani</option>
+          <option value='Rezina'>Rezina</option>
+          <option value='Sangerei'>Sangerei</option>
+          <option value='Soroca'>Soroca</option>
+          <option value='Soldanesti'>Soldanesti</option>
+          <option value='Stefan Voda'>Stefan Voda</option>
+          <option value='Straseni'>Straseni</option>
+          <option value='Taraclia'>Taraclia</option>
+          <option value='Telenesti'>Telenesti</option>
+          <option value='Ungheni'>Ungheni</option>
+          <option value='Vulcanesti'>Vulcanesti</option>
 
         </select>
 
-        <Button handleClick={cauta} label={'cauta'}/>
+        <Button handleClick={cauta} label={'Cauta'}/>
       </div>
     </div>
 )}
