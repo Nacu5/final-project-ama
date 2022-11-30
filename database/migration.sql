@@ -1,7 +1,7 @@
 create database amaProject;
 
 create table amaProject.specialisti (
-	id int auto_increment primary key,
+	  id int auto_increment primary key,
     nume text (40) not null,
     prenume text (40) not null,
     oras text (40),
